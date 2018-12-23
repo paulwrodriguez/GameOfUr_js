@@ -63,18 +63,29 @@ function drawBoard(){
     rect(wpart*3,hpart*i, wpart, hpart);
   }
   
-  // drawStar(wpart*1.5, hpart*1.5, wpart/3);
+  drawStar(wpart+(wpart*.5), hpart+(hpart*.5), wpart/3);
+  drawStar(wpart*3+(wpart*.5), hpart+(hpart*.5), wpart/3);
+  drawStar((wpart*2)+(wpart*.5), (hpart*4)+(hpart*.5), wpart/3);
+  drawStar((wpart*1)+(wpart*.5), (hpart*7)+(hpart*.5), wpart/3);
+  drawStar((wpart*3)+(wpart*.5), (hpart*7)+(hpart*.5), wpart/3);
   
 }
 
 function drawStar(wpart, hpart, s){
-  // draw rossette on rect(wpart*1,hpart*1, wpart, hpart);
   push();
   fill(b1)
   stroke(b3)
   translate(wpart, hpart);
   // rotate(frameCount/50);
-  star(0, 0, 4, s, 6); 
+  
+  // star(0, 0, 4, s, 6); 
+  ellipse(0, 0, 5, s*2)
+  rotate(HALF_PI)
+  ellipse(0, 0, 5, s*2)
+  rotate(HALF_PI/2)
+  ellipse(0, 0, 5, s)
+  rotate(HALF_PI)
+  ellipse(0, 0, 5, s)
   pop(); 
 }
 

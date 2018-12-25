@@ -1,17 +1,21 @@
-function Gradient(_w,_h) {
+function Gradient(_w, _h) {
+
+  this.init = function(_w, _h) {
+    this.Y_AXIS = 1;
+    this.X_AXIS = 2;
+    this.h = _h;
+    this.w = _w;
+    this.b1 = color("#647277");
+    this.b2 = color("#638A94");
+    this.b3 = color("#BAD1D1");
+    this.b4 = color("#F3ECD9");
+    this.b5 = color("#FCB3B3");
+  }
   
-  this.Y_AXIS = 1; // if you dont use 'this' then the code will error on reference
-  this.X_AXIS = 2;
-  
-  this.h = _h;
-  this.w = _w;
-  
-  this.b1 = color("#647277");
-  this.b2 = color("#638A94");
-  this.b3 = color("#BAD1D1");
-  this.b4 = color("#F3ECD9");
-  this.b5 = color("#FCB3B3");
-  
+  // call constructor
+  this.init(_w,_h);
+
+
   this.display = function() {
     var hpart = this.h / 4;
     this.setGradient(0, 0, this.w, hpart, this.b1, this.b2, this.Y_AXIS);

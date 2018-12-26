@@ -12,31 +12,37 @@ function Board(_w, _h) {
     
     // player one start
     this.spaces.push(new Space(wpart, hpart,wpart, hpart, new Rossett()))
-    for (var i = 2; i <= 4; i += 1) {
-      this.spaces.push(new Space(wpart, hpart*i,wpart, hpart))
-    }
+    this.spaces.push(new Space(wpart, hpart*2,wpart, hpart))
+    this.spaces.push(new Space(wpart, hpart*3,wpart, hpart))
+    this.spaces.push(new Space(wpart, hpart*4,wpart, hpart))
     
-
-    // player one end 
-    for (var i = 7; i <= 8; i += 1) {
-      this.spaces.push(new Space(wpart, hpart*i,wpart, hpart))
-    }
+    // Player one end 
+    this.spaces.push(new Space(wpart, hpart*7,wpart, hpart, new Rossett()))
+    this.spaces.push(new Space(wpart, hpart*8,wpart, hpart))
+    
 
     // shared column 
-    for (var i = 1; i <= 8; i += 1) {
-      this.spaces.push(new Space(wpart*2, hpart*i,wpart, hpart))
-    }
+    this.spaces.push(new Space(wpart*2, hpart*1,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*2,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*3,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*4,wpart, hpart, new Rossett()))
+    this.spaces.push(new Space(wpart*2, hpart*5,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*6,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*7,wpart, hpart))
+    this.spaces.push(new Space(wpart*2, hpart*8,wpart, hpart))
+    
 
     // player 2 start 
-    for (var i = 1; i <= 4; i += 1) {
-      this.spaces.push(new Space(wpart*3, hpart*i,wpart, hpart))
-    }
-
-    // player 3 end 
-    for (var i = 7; i <= 8; i += 1) {
-      this.spaces.push(new Space(wpart*3, hpart*i,wpart, hpart))
-    }
+    this.spaces.push(new Space(wpart*3, hpart*1,wpart, hpart, new Rossett()))
+    this.spaces.push(new Space(wpart*3, hpart*2,wpart, hpart))
+    this.spaces.push(new Space(wpart*3, hpart*3,wpart, hpart))
+    this.spaces.push(new Space(wpart*3, hpart*4,wpart, hpart))
     
+    // Player 2 end
+    this.spaces.push(new Space(wpart*3, hpart*7,wpart, hpart, new Rossett()))
+    this.spaces.push(new Space(wpart*3, hpart*8,wpart, hpart))
+
+    // Colors
     this.b1 = color("#647277");
     this.b2 = color("#638A94");
     this.b3 = color("#BAD1D1");

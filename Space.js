@@ -24,7 +24,7 @@ function Space(x, y, w, h, special) {
     pop()
     if(this.special != null) {
       // this.drawStar(wpart + (wpart * .5), hpart + (hpart * .5), wpart / 3);
-      this.special.display(this.x+this.w, this.y + this.h, this.w/3);
+      this.special.display(this.x+this.w*.5, this.y +this.h*.5, this.w/3);
     }
     
   }

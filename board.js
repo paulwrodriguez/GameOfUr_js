@@ -20,7 +20,6 @@ function Board(_w, _h) {
     this.spaces.push(new Space(wpart, hpart*7,wpart, hpart, new Rossett()))
     this.spaces.push(new Space(wpart, hpart*8,wpart, hpart))
     
-
     // shared column 
     this.spaces.push(new Space(wpart*2, hpart*1,wpart, hpart))
     this.spaces.push(new Space(wpart*2, hpart*2,wpart, hpart))
@@ -31,7 +30,6 @@ function Board(_w, _h) {
     this.spaces.push(new Space(wpart*2, hpart*7,wpart, hpart))
     this.spaces.push(new Space(wpart*2, hpart*8,wpart, hpart))
     
-
     // player 2 start 
     this.spaces.push(new Space(wpart*3, hpart*1,wpart, hpart, new Rossett()))
     this.spaces.push(new Space(wpart*3, hpart*2,wpart, hpart))

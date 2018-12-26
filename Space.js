@@ -22,11 +22,11 @@ function Space(x, y, w, h, special) {
     fill(this.b4);
     rect(this.x, this.y, this.w, this.h);
     pop()
-    if(this.special != null) {
+    if (this.special != null) {
       // this.drawStar(wpart + (wpart * .5), hpart + (hpart * .5), wpart / 3);
-      this.special.display(this.x+this.w*.5, this.y +this.h*.5, this.w/3);
+      this.special.display(this.x + this.w * .5, this.y + this.h * .5, this.w / 3);
     }
-    
+
   }
 
 
